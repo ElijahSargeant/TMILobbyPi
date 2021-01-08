@@ -23,7 +23,7 @@ try {
     $cmd | & $PSFTPPath -pw $FTPPass "$FTPUser@$FTPHost" -be
 
     #copy over new files in /media/ on network pi folder
-    ./pscp.exe -P 22 -pw 'trimation' media/*.jpg  :Desktop/TrimationLobbyProject/media/
+    ./pscp.exe -P 22 -pw '' media/*.jpg  :Desktop/TrimationLobbyProject/media/
 
 
     Write-Host "PSCP successfully transfered files!" -Foregroundcolor Green
