@@ -7,9 +7,9 @@
 try {
     #Open up psftp connection
 
-    $FTPHost = "192.168.254.145"
-    $FTPUser = "pi"
-    $FTPPass = "trimation"
+    $FTPHost = ""
+    $FTPUser = ""
+    $FTPPass = ""
     $PSFTPPath = "S:\zRaspberryPi\psftp.exe"
     $cmd = @(
 
@@ -23,7 +23,7 @@ try {
     $cmd | & $PSFTPPath -pw $FTPPass "$FTPUser@$FTPHost" -be
 
     #copy over new files in /media/ on network pi folder
-    ./pscp.exe -P 22 -pw 'trimation' media/*.jpg  pi@192.168.254.145:Desktop/TrimationLobbyProject/media/
+    ./pscp.exe -P 22 -pw 'trimation' media/*.jpg  :Desktop/TrimationLobbyProject/media/
 
 
     Write-Host "PSCP successfully transfered files!" -Foregroundcolor Green
